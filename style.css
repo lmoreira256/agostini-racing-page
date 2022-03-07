@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    position: relative;
+    background: linear-gradient(120deg, #fff, #fff 62%, #ED6904 62%, #ED6904 100%);
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 50px;
+    margin-right: 20px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    color: #ed5204;
+}
+
+.donate:hover {
+    background: #ed8004;
+    color: #fff;
+}
+
+.donate {
+    position: absolute;
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #ed5204;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donate ion-icon {
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+.contentBx {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBx .text {
+    max-width: 800px;
+}
+
+.contentBx .text h2 {
+    font-size: 6em;
+    color: #ed5204;
+}
+
+.contentBx .text p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8em;
+}
+
+.contentBx .text h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.btn {
+    background: #ed5204;
+    color: #fff;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    margin: 5px 20px 5px 0;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ed8004;
+}
+
+.btn ion-icon {
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+.imgBx img {
+    margin-left: 50px;
+    margin-right: 100px;
+    display: none;
+    border-radius: 5%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: 700px;
+}
+
+.imgBx img.active {
+    display: block;
+}
+
+.dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dots .dot {
+    position: relative;
+    width: 10px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    display: inline-flex;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dots .dot.active {
+    background: #fff;
+}
+
+.sci {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+
+.sci li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.sci li a {
+    font-size: 1.8em;
+    color: #ed6904;
+}
+
+.sci li a:hover {
+    color: #ed8004;
+}

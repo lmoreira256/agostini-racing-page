@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Agostini Racing</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+    <section class="main">
+        <header>
+            <a href="#" class="logo"><img src="logo.png"></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <a href="#" class="donate">
+                <ion-icon name="rocket-outline"></ion-icon> Seja nosso parceiro
+            </a>
+        </header>
+
+        <div class="contentBx">
+            <div class="text">
+                <h2>Agostini Racing</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi mollitia autem nostrum doloribus omnis
+                    consectetur veritatis, repudiandae cum expedita quo, harum molestias odio ea.
+                </p>
+                <h4>Entre em contato conosco</h4>
+                <a href="https://api.whatsapp.com/send?phone=5549988058441" class="btn">
+                    <ion-icon name="call-outline"></ion-icon> Clique aqui
+                </a>
+            </div>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="imgBx">
+                <img src="1.png" class="slides active">
+                <img src="2.png" class="slides">
+                <img src="3.png" class="slides">
+                <img src="4.png" class="slides">
+                <img src="5.png" class="slides">
+            </div>
+        </div>
+
+        <ul class="sci">
+            <li><a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li><a href="https://www.instagram.com/agostiniracing/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+
+        function SetActive(i) {
+            for (slide of slides)
+                slide.classList.remove('active');
+            slides[i].classList.add('active');
+
+            for (dot of dots)
+                dot.classList.remove('active');
+            dots[i].classList.add('active');
+        }
+
+        let counter = 1;
+
+        function Test() {
+            setTimeout(() => {
+                if (counter == 6) {
+                    counter = 1
+                }
+
+                SetActive(counter - 1);
+                counter++;
+                Test(counter);
+            }, 2000);
+        }
+
+        Test();
+
+        for (let j = 0; j < dots.length; j++) {
+            dots[j].addEventListener('click', function () {
+                SetActive(j);
+                counter = j + 1;
+            });
+        }
+    </script>
+</body>
+
+</html>
