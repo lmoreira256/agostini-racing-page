@@ -96,7 +96,6 @@ header ul li a.active {
 
 .imgBx img {
     margin-left: 50px;
-    margin-right: 100px;
     display: none;
     border-radius: 5%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

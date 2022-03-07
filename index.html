@@ -31,14 +31,6 @@
                 </a>
             </div>
 
-            <div class="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-
             <div class="imgBx">
                 <img src="1.png" class="slides active">
                 <img src="2.png" class="slides">
@@ -63,16 +55,11 @@
 
     <script>
         const slides = document.querySelectorAll('.slides');
-        const dots = document.querySelectorAll('.dot');
 
         function SetActive(i) {
             for (slide of slides)
                 slide.classList.remove('active');
             slides[i].classList.add('active');
-
-            for (dot of dots)
-                dot.classList.remove('active');
-            dots[i].classList.add('active');
         }
 
         let counter = 1;
@@ -90,13 +77,6 @@
         }
 
         Test();
-
-        for (let j = 0; j < dots.length; j++) {
-            dots[j].addEventListener('click', function () {
-                SetActive(j);
-                counter = j + 1;
-            });
-        }
     </script>
 </body>
 
