@@ -52,30 +52,6 @@ header ul li a.active {
     color: #ed5204;
 }
 
-.donate:hover {
-    background: #ed8004;
-    color: #fff;
-}
-
-.donate {
-    position: absolute;
-    right: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    color: #ed5204;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.donate ion-icon {
-    margin-right: 10px;
-    font-size: 1.4em;
-}
-
 .contentBx {
     width: 100%;
     display: flex;
@@ -88,7 +64,7 @@ header ul li a.active {
 }
 
 .contentBx .text h2 {
-    font-size: 6em;
+    font-size: 4em;
     color: #ed5204;
 }
 
@@ -96,13 +72,6 @@ header ul li a.active {
     font-size: 1.1em;
     color: #333;
     line-height: 1.8em;
-}
-
-.contentBx .text h4 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #333;
 }
 
 .btn {
@@ -180,4 +149,70 @@ header ul li a.active {
 
 .sci li a:hover {
     color: #ed8004;
+}
+
+@media (max-width: 1240px) {
+    header {
+        padding: 30px;
+        justify-content: space-between;
+    }
+
+    .main {
+        padding: 30px;
+        background: #fff;
+    }
+
+    .contentBx {
+        flex-direction: column-reverse;
+        margin: 100px 0 60px 0;
+    }
+
+    .imgBx img {
+        margin: 0;
+    }
+
+    .dots {
+        position: relative;
+        top: initial;
+        transform: none;
+        right: initial;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .dots .dot {
+        width: 25px;
+        height: 10px;
+        background: #ed6904;
+        opacity: 0.2;
+    }
+
+    .dots .dot.active {
+        background: #ed6904;
+        opacity: 1;
+    }
+
+    .contentBx .text {
+        text-align: center;
+    }
+
+    .contentBx .text h2 {
+        font-size: 3em;
+    }
+
+    .sci {
+        position: absolute;
+        bottom: 30px;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media (max-width: 670px) {
+    .imgBx img {
+        width: 350px;
+        height: 350px;
+    }
 }
